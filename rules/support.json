@@ -1,0 +1,31 @@
+[{
+        "id": 1,
+        "priority": 1,
+        "action": {
+            "type": "allow"
+        },
+        "condition": {
+            "regexFilter": "^*://support\\.microsoft\\.com/en-us",
+            "regexOptions": {
+                "isCaseSensitive": "false"
+            },
+            "resourceTypes": ["main_frame"]
+        }
+    }, {
+        "id": 2,
+        "priority": 2,
+        "action": {
+            "type": "redirect",
+            "redirect": {
+                "regexSubstitution": "\\1en-us\\3"
+            }
+        },
+        "condition": {
+            "regexFilter": "^(.*://support\\.microsoft\\.com/)(\\D{2}\\-\\D{2})(.*)",
+            "regexOptions": {
+                "isCaseSensitive": "false"
+            },
+            "resourceTypes": ["main_frame"]
+        }
+    }
+]
