@@ -14,10 +14,6 @@ chrome.storage.onChanged.addListener(function (changes, namespace) {
 	);
 });
 
-chrome.declarativeNetRequest.onRuleMatchedDebug.addListener(
-  (e)=>console.log(JSON.stringify(e))
-);
-
 readSettings();
 
 function setRuleDisabled(rule,disabled)

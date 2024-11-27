@@ -46,8 +46,6 @@
   },
   "permissions": [
     "declarativeNetRequest",
-    "declarativeNetRequestFeedback",
-    "declarativeNetRequestWithHostAccess",
     "storage"
   ],
    "host_permissions": [
