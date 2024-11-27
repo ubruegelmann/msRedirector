@@ -5,7 +5,7 @@
             "type": "allow"
         },
         "condition": {
-            "regexFilter": "^(.*://learn\\.microsoft\\.com/en\\-us).*$",
+            "regexFilter": "^(.*://*.learn\\.microsoft\\.com/en\\-us).*$",
             "regexOptions": {
                 "isCaseSensitive": "false"
             },
@@ -21,7 +21,7 @@
             }
         },
         "condition": {
-            "regexFilter": "^(.*://learn\\.microsoft\\.com/)(.{2}\\-.{2})(.*)$",
+            "regexFilter": "^(.*://*.learn\\.microsoft\\.com/)(.{2}\\-.{2})(.*)$",
             "regexOptions": {
                 "isCaseSensitive": "false"
             },
