@@ -14,11 +14,15 @@ chrome.storage.onChanged.addListener(function (changes, namespace) {
 	);
 });
 
+chrome.declarativeNetRequest.onRuleMatchedDebug.addListener(
+  (e)=>console.log(JSON.stringify(e))
+);
 
 readSettings();
 
 function setRuleDisabled(rule,disabled)
 {
+	console.log('setting '+rule+' to '+!disabled);
     if (disabled==false && enabledRules.indexOf(rule)<0)
     {
         disabledRules.splice(disabledRules.indexOf(rule),1);
@@ -30,6 +34,7 @@ function setRuleDisabled(rule,disabled)
         enabledRules.splice(enabledRules.indexOf(rule),1);
         disabledRules = disabledRules.concat([rule]);
     }
+	console.log('switching '+JSON.stringify(disabledRules)+':'+JSON.stringify(enabledRules));
     chrome.declarativeNetRequest.updateEnabledRulesets({"disableRulesetIds":disabledRules,"enableRulesetIds":enabledRules});
 }
 

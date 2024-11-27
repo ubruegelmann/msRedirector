@@ -5,7 +5,7 @@
             "type": "allow"
         },
         "condition": {
-            "regexFilter": "^*://support\\.microsoft\\.com/en-us",
+            "regexFilter": "^*://support\\.microsoft\\.com/en\\-us.*$",
             "regexOptions": {
                 "isCaseSensitive": "false"
             },
@@ -21,7 +21,7 @@
             }
         },
         "condition": {
-            "regexFilter": "^(.*://support\\.microsoft\\.com/)(\\D{2}\\-\\D{2})(.*)",
+            "regexFilter": "^(.*://support\\.microsoft\\.com/)(.{2}\\-.{2})(.*)$",
             "regexOptions": {
                 "isCaseSensitive": "false"
             },

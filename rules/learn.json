@@ -21,7 +21,7 @@
             }
         },
         "condition": {
-            "regexFilter": "^(.*://learn\\.microsoft\\.com/)(\\D{2}\\-\\D{2})(.*)$",
+            "regexFilter": "^(.*://learn\\.microsoft\\.com/)(.{2}\\-.{2})(.*)$",
             "regexOptions": {
                 "isCaseSensitive": "false"
             },
